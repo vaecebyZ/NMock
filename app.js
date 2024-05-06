@@ -11,6 +11,7 @@ const opn = require('opn')
 const body = require('stream-body')
 const zlib = require('zlib')
 const config = require('./config')
+const os = require('os');
 
 let app = express()
 
@@ -251,7 +252,9 @@ function onListening () {
   console.log(`[MAIN] Listening on ${bind}`)
 
   if (config.showReadMe) {
-    opn(`http://localhost:${config.port}/readme`)
+    if(os.type() === 'Windows_NT' || os.type() === 'Darwin') {
+      opn(`http://localhost:${config.port}/readme`)
+    }
   }
 }
 
