@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 7880
 
 # 启动应用程序
-CMD ["npm", "run", "start"]
+CMD ["node","--use-strict","app.js"]
