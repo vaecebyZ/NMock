@@ -1,0 +1,14 @@
+# yaml 配置实例
+version: '3'
+services:
+  nmock:
+    ports:
+      - "7880:7880"
+    image: nmock:latest
+    container_name: nmock
+    # environment:
+    #   - MOCK_PORT=7880
+    #   - MOCK_DIR=/mock
+    #   - MOCK_LOG=/mock/log
+    # volumes:
+    #   - ./mock:/mock
