@@ -1,4 +1,4 @@
-# mock-server
+# NMock
 
 派生至 [Yakima-Teng/mock-server](https://github.com/Yakima-Teng/mock-server)
 
