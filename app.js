@@ -99,6 +99,11 @@ app.get('/readme', (req, res, next) => {
   })
 })
 
+//resend to /readme
+app.get('/', (req, res, next) => {
+  res.redirect('/readme')
+})
+
 // response row json file content
 config.jsonTable.forEach(context => {
   // 根据路径生成对应的文件名（不含文件后缀）
